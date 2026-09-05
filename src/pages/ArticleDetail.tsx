@@ -35,7 +35,7 @@ export default function ArticleDetail() {
     <div className="min-h-screen overflow-x-hidden bg-[#F9F3F3] text-[#3A3032]">
       <SiteHeader />
 
-      <main className="mx-auto w-full max-w-6xl px-6 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+      <main className="mx-auto w-full max-w-6xl px-6 pb-8 pt-4 sm:px-8 sm:pb-12 sm:pt-7 lg:px-10 lg:pb-16 lg:pt-9">
 
         {/* Back */}
         <Link
@@ -91,10 +91,12 @@ export default function ArticleDetail() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#24191b]/40 via-transparent to-white/5" />
 
-              <figcaption className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[8px] tracking-[0.16em] text-white/80 sm:bottom-5 sm:left-5 sm:right-5">
-                <span>ON THE WAY</span>
-                <span aria-hidden="true">✦</span>
-              </figcaption>
+              {article.imageCaption && (
+                <figcaption className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[8px] tracking-[0.16em] text-white/80 sm:bottom-5 sm:left-5 sm:right-5">
+                  <span>{article.imageCaption}</span>
+                  <span aria-hidden="true">✦</span>
+                </figcaption>
+              )}
             </div>
           </figure>
         </div>

@@ -8,6 +8,7 @@ export interface Article {
   readTime: string
   category: string
   image: string
+  imageCaption?: string
 }
 
 export const articles: Article[] = [
@@ -21,6 +22,7 @@ export const articles: Article[] = [
     readTime: "1 MIN",
     category: "PERSONAL",
     image: "/images/pict1.jpeg",
+    imageCaption: "ON THE WAY",
     content: [
       'Aku bukan manusia yang dilahirkan dengan seribu keberanian, setiap titik hidup yang aku lewati membawaku memahami kata "Berhenti untuk takut". Dan setelah 20 tahun, aku merasa setiap fase kehidupan mengajakku membawa kepada pelarian. ',
       "Buat apa terus berdiam diri? Lebih baik aku melakukan suatu perubahan, lebih baik aku bangun dari titik malasku untuk mulai mewujudkan setiap impian yang aku redam dari dulu.",
