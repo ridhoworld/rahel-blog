@@ -126,7 +126,7 @@ export default function Home() {
 
                 {/* Location */}
                 <div className="absolute bottom-3 left-3 rounded-full border border-white/40 bg-[#FFFDFC]/85 px-3 py-1.5 text-[7px] tracking-[0.15em] text-[#5C464B] backdrop-blur-md">
-                  BASED IN INDONESIA
+                  Based in Cairo, Egypt
                 </div>
 
                 {/* Star */}
