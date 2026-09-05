@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function SiteHeader() {
   return (
     <header className="border-b border-black/10">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-8 sm:py-6 lg:px-10">
         <Link
           to="/"
           className="text-xs font-semibold tracking-[0.25em] sm:text-sm sm:tracking-[0.3em]"

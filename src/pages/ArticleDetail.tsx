@@ -35,7 +35,7 @@ export default function ArticleDetail() {
     <div className="min-h-screen overflow-x-hidden bg-[#F9F3F3] text-[#3A3032]">
       <SiteHeader />
 
-      <main className="mx-auto w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+      <main className="mx-auto w-full max-w-6xl px-6 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
 
         {/* Back */}
         <Link
@@ -45,40 +45,58 @@ export default function ArticleDetail() {
           ← BACK HOME
         </Link>
 
-        {/* Header */}
-        <header className="mt-10 sm:mt-14 lg:mt-16">
+        {/* Header and hero image */}
+        <div className="mt-10 grid items-end gap-10 sm:mt-14 lg:mt-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(300px,0.72fr)] lg:gap-16">
+          <header>
+            {/* Meta */}
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[8px] tracking-[0.13em] text-[#A97882] sm:gap-3 sm:text-xs sm:tracking-[0.2em]">
+              <span aria-hidden="true">✿</span>
+              <span>{article.date}</span>
 
-          {/* Meta */}
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[8px] tracking-[0.13em] text-black/40 sm:gap-3 sm:text-xs sm:tracking-[0.2em]">
-            <span>{article.date}</span>
+              <span className="text-black/25">·</span>
 
-            <span>·</span>
+              <span>{article.category}</span>
 
-            <span>{article.category}</span>
+              <span className="text-black/25">·</span>
 
-            <span>·</span>
+              <span>{article.readTime}</span>
+            </div>
 
-            <span>{article.readTime}</span>
-          </div>
+            {/* Title */}
+            <h1 className="mt-5 max-w-3xl font-serif text-[2.7rem] font-medium leading-[0.96] tracking-[-0.04em] sm:mt-6 sm:text-6xl sm:leading-[0.94] lg:text-7xl xl:text-[5.5rem]">
+              {article.title}
+            </h1>
 
-          {/* Title */}
-          <h1 className="mt-5 max-w-5xl font-serif text-[2.35rem] font-medium leading-[0.98] tracking-[-0.04em] sm:mt-6 sm:text-5xl sm:leading-[0.96] md:text-6xl lg:text-7xl xl:text-[5.5rem]">
-            {article.title}
-          </h1>
+            {/* Excerpt */}
+            <p className="mt-6 max-w-xl text-base leading-7 text-black/55 sm:mt-8 sm:text-lg sm:leading-8">
+              {article.excerpt}
+            </p>
 
-          {/* Excerpt */}
-          <p className="mt-6 max-w-2xl text-base leading-7 text-black/50 sm:mt-8 sm:text-lg sm:leading-8">
-            {article.excerpt}
-          </p>
-        </header>
+            <div className="mt-8 flex items-center gap-3 text-[#A97882]/70 sm:mt-10">
+              <span className="h-px w-12 bg-[#C79AA3]" />
+              <span className="text-xs">✦</span>
+              <span className="text-[8px] tracking-[0.2em]">A PERSONAL NOTE</span>
+            </div>
+          </header>
 
-        {/* Hero image */}
-        <div className="mt-9 overflow-hidden rounded-[1.25rem] sm:mt-12 sm:rounded-[1.75rem] lg:mt-14 lg:rounded-[2rem]">
-          <img
-            src={article.image}
-            alt={article.title}
-            className="aspect-[4/3] h-auto w-full object-cover sm:aspect-[16/9]"
-          />
+          <figure className="relative lg:justify-self-end lg:max-w-[380px]">
+            <div className="absolute -inset-2 rounded-[1.7rem] border border-[#D9BBC0]/70 sm:-inset-3 sm:rounded-[2rem]" />
+
+            <div className="relative overflow-hidden rounded-[1.35rem] bg-[#3A3032] shadow-[0_18px_50px_rgba(91,60,67,0.16)] sm:rounded-[1.7rem]">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="aspect-[4/5] h-auto w-full object-cover object-[30%_center]"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#24191b]/40 via-transparent to-white/5" />
+
+              <figcaption className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[8px] tracking-[0.16em] text-white/80 sm:bottom-5 sm:left-5 sm:right-5">
+                <span>ON THE WAY</span>
+                <span aria-hidden="true">✦</span>
+              </figcaption>
+            </div>
+          </figure>
         </div>
 
         {/* Article content */}

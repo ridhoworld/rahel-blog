@@ -10,7 +10,8 @@ export default function Home() {
   )[0]
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#F9F3F3] text-[#3A3032]">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#F9F3F3] text-[#3A3032] lg:h-screen lg:overflow-hidden">
+
       {/* Decorative background */}
       <div className="pointer-events-none absolute -left-24 top-24 h-48 w-48 rounded-full bg-[#E8D5D8]/40 blur-3xl" />
 
@@ -18,24 +19,26 @@ export default function Home() {
 
       <SiteHeader />
 
-      <main className="relative mx-auto w-full max-w-7xl px-5 py-8 sm:px-8 sm:py-10 lg:flex lg:min-h-[calc(100vh-81px)] lg:items-center lg:px-10 lg:py-8">
-        <section className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)] lg:items-center lg:gap-12">
+      <main className="relative mx-auto flex w-full max-w-6xl items-center px-6 py-8 sm:px-8 lg:h-[calc(100vh-81px)] lg:px-10 lg:py-4">
+
+        <section className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_320px] xl:gap-10">
 
           {/* ================= LEFT ================= */}
           <div className="relative min-w-0">
 
-            {/* Decorative flower */}
-            <div className="absolute -left-2 -top-6 hidden text-2xl text-[#A97882]/50 sm:block">
-              ✿
+            {/* Greeting */}
+            <div className="mb-3 flex items-center gap-2 text-[#A97882]">
+              <span className="text-base leading-none text-[#A97882]/70" aria-hidden="true">
+                ✿
+              </span>
+
+              <p className="text-[9px] font-medium tracking-[0.3em] sm:text-[10px] sm:tracking-[0.35em]">
+                HELLO, I'M RAHEL
+              </p>
             </div>
 
-            {/* Greeting */}
-            <p className="mb-4 text-[9px] font-medium tracking-[0.3em] text-[#A97882] sm:text-[10px] sm:tracking-[0.35em]">
-              HELLO, I'M RAHEL
-            </p>
-
             {/* Heading */}
-            <h1 className="max-w-3xl font-serif text-[2.25rem] font-medium leading-[1.04] tracking-[-0.035em] text-[#3A3032] sm:text-5xl md:text-6xl lg:text-[clamp(3.5rem,5vw,5.4rem)]">
+            <h1 className="max-w-3xl font-serif text-[2rem] font-medium leading-[1.02] tracking-[-0.035em] text-[#3A3032] sm:text-5xl md:text-6xl lg:text-[clamp(2.8rem,4vw,4.5rem)]">
               Mengarungi dunia,
               <br />
               menyerap hikmah,
@@ -50,18 +53,18 @@ export default function Home() {
             </h1>
 
             {/* Decorative line */}
-            <div className="mt-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#C79AA3] sm:w-12" />
+            <div className="mt-4 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#C79AA3]" />
 
               <span className="text-xs text-[#A97882]">
                 ✦
               </span>
 
-              <span className="h-px w-5 bg-[#E1C7CB] sm:w-6" />
+              <span className="h-px w-5 bg-[#E1C7CB]" />
             </div>
 
             {/* Description */}
-            <p className="drop-cap mt-5 max-w-xl text-sm leading-6 text-[#3A3032]/65 sm:text-base sm:leading-7">
+            <p className="drop-cap mt-4 max-w-lg text-sm leading-6 text-[#3A3032]/65">
               Seorang pembelajar yang senang berjalan dan menjelajahi
               hal-hal baru. Bagi aku, setiap perjalanan dan ilmu yang
               didapat adalah bahan baku untuk memahami kehidupan.
@@ -73,7 +76,7 @@ export default function Home() {
             {/* Latest article */}
             <Link
               to={`/article/${latestArticle.slug}`}
-              className="group mt-6 inline-flex items-center gap-3 text-[10px] font-medium tracking-[0.13em] text-[#7F5962] sm:text-xs sm:tracking-[0.15em]"
+              className="group mt-4 inline-flex items-center gap-3 text-[10px] font-medium tracking-[0.13em] text-[#7F5962] sm:text-xs"
             >
               <span className="border-b border-[#A97882] pb-1">
                 READ MY LATEST ARTICLE
@@ -85,31 +88,32 @@ export default function Home() {
             </Link>
 
             {/* Bottom decoration */}
-            <div className="mt-7 flex items-center gap-3 text-[#A97882]/50 sm:mt-8 sm:gap-4">
-              <span className="text-base sm:text-lg">
+            <div className="mt-5 flex items-center gap-3 text-[#A97882]/50">
+              <span className="text-base">
                 ♡
               </span>
 
-              <span className="text-[8px] tracking-[0.25em] sm:text-[9px] sm:tracking-[0.3em]">
+              <span className="text-[8px] tracking-[0.25em]">
                 PERSONAL JOURNAL
               </span>
 
-              <span className="text-base sm:text-lg">
+              <span className="text-base">
                 ✦
               </span>
             </div>
+
           </div>
 
           {/* ================= RIGHT ================= */}
           <div className="relative min-w-0">
 
-            {/* ================= PHOTO ================= */}
+            {/* PHOTO */}
             <div className="relative">
 
               {/* Decorative frame */}
-              <div className="absolute -inset-1.5 rounded-[1.7rem] border border-[#D9BBC0]/60 sm:-inset-2 sm:rounded-[2rem]" />
+              <div className="absolute -inset-1.5 rounded-[1.5rem] border border-[#D9BBC0]/60" />
 
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] bg-[#E8D5D8] sm:aspect-[4/4.5] sm:rounded-[1.7rem] lg:aspect-[4/4.7]">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.35rem] bg-[#E8D5D8]">
 
                 <img
                   src="/profile1.jpeg"
@@ -121,28 +125,31 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3A3032]/20 via-transparent to-transparent" />
 
                 {/* Location */}
-                <div className="absolute bottom-3 left-3 rounded-full border border-white/40 bg-[#FFFDFC]/85 px-3 py-1.5 text-[7px] tracking-[0.15em] text-[#5C464B] backdrop-blur-md sm:bottom-4 sm:left-4 sm:px-4 sm:py-2 sm:text-[9px] sm:tracking-[0.2em]">
+                <div className="absolute bottom-3 left-3 rounded-full border border-white/40 bg-[#FFFDFC]/85 px-3 py-1.5 text-[7px] tracking-[0.15em] text-[#5C464B] backdrop-blur-md">
                   BASED IN INDONESIA
                 </div>
 
                 {/* Star */}
-                <div className="absolute right-4 top-4 text-xl text-white/80 sm:right-5 sm:top-5 sm:text-2xl">
+                <div className="absolute right-4 top-4 text-xl text-white/80">
                   ✦
                 </div>
+
               </div>
             </div>
 
-            {/* ================= ARTICLES ================= */}
-            <div className="relative mt-6 lg:mt-5">
+            {/* ARTICLES */}
+            <div className="relative mt-3">
 
-              {/* Heart */}
-              <span className="absolute -right-1 -top-3 z-10 text-lg text-[#A97882]/60 sm:-right-2 sm:-top-4 sm:text-xl">
+              <span className="absolute -right-1 -top-3 z-10 text-lg text-[#A97882]/60">
                 ♡
               </span>
 
               <ArticleList />
+
             </div>
+
           </div>
+
         </section>
       </main>
     </div>
