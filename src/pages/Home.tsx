@@ -113,7 +113,7 @@ export default function Home() {
               {/* Decorative frame */}
               <div className="absolute -inset-1.5 rounded-[1.5rem] border border-[#D9BBC0]/60" />
 
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.35rem] bg-[#E8D5D8]">
+              <div className="relative h-[345px] w-full overflow-hidden rounded-[1.35rem] bg-[#E8D5D8]">
 
                 <img
                   src="/profile1.jpeg"
